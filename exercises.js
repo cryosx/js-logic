@@ -488,10 +488,10 @@ var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black 
 			special[i] = "Classic Tuna";
 		} 
 	}
-	console.log("Specials: " + special);
+	return special;
   } 
 
- subways(subOftheDay);
+console.log("Specials: " + subways(subOftheDay));
 
 /*
 Final Boss
@@ -507,8 +507,18 @@ Final Boss
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
  
-  
-  
+ function remoteLetter(str) {
+ 	var temp = [];
+ 	for (var i = 0; i < str.length; i++) {
+ 		if (str.charAt(i) !== "A" && str.charAt(i) !== "a") {
+ 			temp.push(str.charAt(i));
+ 		}
+ 	}
+ 	return temp;
+ } 
+
+ console.log(remoteLetter(phrase));
+ 
 
 
 
