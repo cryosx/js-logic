@@ -425,7 +425,18 @@ for (var i = 1; i < 6; i++) {
  * Console.log your result.
 */
 
+var numArray = [1,2,3,4,5];
+var total = 0;
+function sumItUp(arr) {
+	var temp = 0;
+	for (var i = 0; i < arr.length; i++) {
+		temp += arr[i];
+	}
+	return temp;
+}
 
+total = sumItUp(numArray);
+console.log(total);
 
 /*
  * #18
