@@ -315,8 +315,11 @@ var doughnutPrice = 5;
 var doughnutBought = 0;
 
 function buyDoughnut() {
-	budget -= doughnutPrice;
-	doughnutBought++;
+	if (budget > doughnutPrice) {
+		budget -= doughnutPrice;
+		doughnutBought++;
+	}
+
 }
 
 console.log(budget + " : " + doughnutBought);
