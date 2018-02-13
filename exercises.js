@@ -315,11 +315,10 @@ var doughnutPrice = 5;
 var doughnutBought = 0;
 
 function buyDoughnut() {
-	if (budget > doughnutPrice) {
+	if (budget >= doughnutPrice) {
 		budget -= doughnutPrice;
 		doughnutBought++;
 	}
-
 }
 
 console.log(budget + " : " + doughnutBought);
