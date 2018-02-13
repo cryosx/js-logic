@@ -362,6 +362,10 @@ function dailySpecials(special) {
 }
 
 console.log(dailySpecials("Monday"));
+console.log(dailySpecials("tuesday"));
+console.log(dailySpecials("wednesday"));
+console.log(dailySpecials("thursday"));
+console.log(dailySpecials("friday"));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -390,13 +394,21 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+for (var i = 1; i < 6; i++) {
+	console.log("Player: " + i);
+}
+
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
-  var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+ var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+
+  for (var i = 0; i < myFavFoods.length; i++) {
+  	console.log(myFavFoods[i]);
+  }
 
 /*
  * #17
@@ -413,7 +425,18 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
+var numArray = [1,2,3,4,5];
+var total = 0;
+function sumItUp(arr) {
+	var temp = 0;
+	for (var i = 0; i < arr.length; i++) {
+		temp += arr[i];
+	}
+	return temp;
+}
 
+total = sumItUp(numArray);
+console.log(total);
 
 /*
  * #18
@@ -428,6 +451,23 @@ for (var i = 0; i<toyotaModels.length; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+function allStarts(ballers) {
+	var east = [];
+	var west = [];
+	for (var i = 0; i < ballers.length; i++) {
+		if (i % 2 == 0) {
+			east.push(ballers[i]);
+		} else {
+			west.push(ballers[i]);
+		}
+	}
+	console.log("East: " + east);
+	console.log("West: " + west);
+}
+allStarts(players);
+
+
 /*
  * #19
  * Function - subways
@@ -440,8 +480,18 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
  * Console.log your results.
 */ 
 
-  var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+  function subways(special) {
+  	for (var i = 0; i < special.length; i++) {
+		if (i % 2 == 1) {
+			special[i] = "Classic Tuna";
+		} 
+	}
+	return special;
+  } 
+
+console.log("Specials: " + subways(subOftheDay));
 
 /*
 Final Boss
@@ -457,8 +507,18 @@ Final Boss
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
  
-  
-  
+ function remoteLetter(str) {
+ 	var temp = [];
+ 	for (var i = 0; i < str.length; i++) {
+ 		if (str.charAt(i) !== "A" && str.charAt(i) !== "a") {
+ 			temp.push(str.charAt(i));
+ 		}
+ 	}
+ 	return temp;
+ } 
+
+ console.log(remoteLetter(phrase));
+ 
 
 
 
