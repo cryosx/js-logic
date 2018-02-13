@@ -450,6 +450,22 @@ console.log(total);
  * Console.log both the east and west arrays.
 */ 
 
+var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+function allStarts(ballers) {
+	var east = [];
+	var west = [];
+	for (var i = 0; i < ballers.length; i++) {
+		if (i % 2 == 0) {
+			east.push(ballers[i]);
+		} else {
+			west.push(ballers[i]);
+		}
+	}
+	console.log("East: " + east);
+	console.log("West: " + west);
+}
+allStarts(players);
 
 
 /*
