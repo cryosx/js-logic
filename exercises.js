@@ -362,6 +362,10 @@ function dailySpecials(special) {
 }
 
 console.log(dailySpecials("Monday"));
+console.log(dailySpecials("tuesday"));
+console.log(dailySpecials("wednesday"));
+console.log(dailySpecials("thursday"));
+console.log(dailySpecials("friday"));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -390,12 +394,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+for (var i = 1; i < 6; i++) {
+	console.log("Player: " + i);
+}
+
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
-  var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
 
 /*
@@ -427,7 +434,8 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log both the east and west arrays.
 */ 
 
-var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+
 /*
  * #19
  * Function - subways
@@ -439,8 +447,6 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
  * The function will loop through the array value and replace all the odd numbered indexed items with "Classic Tuna".
  * Console.log your results.
 */ 
-
-  var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
 
 /*
